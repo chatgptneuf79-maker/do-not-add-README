@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+dist_deploy.zip
+
+# local artifacts / zips
+build_artifacts/
+*.zip
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
