@@ -1,0 +1,353 @@
+{
+  "version": 2,
+  "worlds": [
+    {
+      "world_id": "W0",
+      "name": "World 0",
+      "boards": [
+        {
+          "board_id": "W0.B0",
+          "name": "Tap Target",
+          "node_activity_id": "W0.B0.node",
+          "boss_activity_id": "W0.B0.boss"
+        },
+        {
+          "board_id": "W0.B1",
+          "name": "Same / Different",
+          "node_activity_id": "W0.B1.node",
+          "boss_activity_id": "W0.B1.boss"
+        },
+        {
+          "board_id": "W0.B2",
+          "name": "Sorting",
+          "node_activity_id": "W0.B2.node",
+          "boss_activity_id": "W0.B2.boss"
+        }
+      ]
+    },
+    {
+      "world_id": "W1",
+      "name": "World 1 \u2014 Confusables (b/d, p/q, m/n)",
+      "boards": [
+        {
+          "board_id": "W1.CF0",
+          "name": "Confusable Letters",
+          "node_activity_id": "W1.CF0.node",
+          "boss_activity_id": "W1.CF0.boss"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "item_id": "grapheme_m",
+      "type": "grapheme",
+      "text": "m",
+      "tags": [
+        "confusable_mn"
+      ]
+    },
+    {
+      "item_id": "grapheme_s",
+      "type": "grapheme",
+      "text": "s"
+    },
+    {
+      "item_id": "grapheme_t",
+      "type": "grapheme",
+      "text": "t"
+    },
+    {
+      "item_id": "grapheme_a",
+      "type": "grapheme",
+      "text": "a"
+    },
+    {
+      "item_id": "grapheme_i",
+      "type": "grapheme",
+      "text": "i"
+    },
+    {
+      "item_id": "grapheme_o",
+      "type": "grapheme",
+      "text": "o"
+    },
+    {
+      "item_id": "pair_mm",
+      "type": "pair",
+      "text": "m \u2022 m"
+    },
+    {
+      "item_id": "pair_ms",
+      "type": "pair",
+      "text": "m \u2022 s"
+    },
+    {
+      "item_id": "pair_tt",
+      "type": "pair",
+      "text": "t \u2022 t"
+    },
+    {
+      "item_id": "pair_ta",
+      "type": "pair",
+      "text": "t \u2022 a"
+    },
+    {
+      "item_id": "grapheme_b",
+      "type": "grapheme",
+      "text": "b",
+      "tags": [
+        "confusable_bd"
+      ]
+    },
+    {
+      "item_id": "grapheme_d",
+      "type": "grapheme",
+      "text": "d",
+      "tags": [
+        "confusable_bd"
+      ]
+    },
+    {
+      "item_id": "grapheme_p",
+      "type": "grapheme",
+      "text": "p",
+      "tags": [
+        "confusable_pq"
+      ]
+    },
+    {
+      "item_id": "grapheme_q",
+      "type": "grapheme",
+      "text": "q",
+      "tags": [
+        "confusable_pq"
+      ]
+    },
+    {
+      "item_id": "grapheme_n",
+      "type": "grapheme",
+      "text": "n",
+      "tags": [
+        "confusable_mn"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "W0.B0.node",
+      "type": "node",
+      "trial_format": "match_this_choose_from_these",
+      "prompt": "Tap the letter shown.",
+      "target_pool": [
+        "grapheme_m",
+        "grapheme_s",
+        "grapheme_t",
+        "grapheme_a"
+      ],
+      "distractor_pool": [
+        "grapheme_m",
+        "grapheme_s",
+        "grapheme_t",
+        "grapheme_a"
+      ],
+      "trials_per_activity": 6,
+      "choices_count": 4
+    },
+    {
+      "activity_id": "W0.B0.boss",
+      "type": "boss",
+      "trial_format": "match_this_choose_from_these",
+      "prompt": "Boss: Tap the letter shown.",
+      "target_pool": [
+        "grapheme_m",
+        "grapheme_s",
+        "grapheme_t",
+        "grapheme_a"
+      ],
+      "distractor_pool": [
+        "grapheme_m",
+        "grapheme_s",
+        "grapheme_t",
+        "grapheme_a"
+      ],
+      "trials_per_activity": 8,
+      "choices_count": 4
+    },
+    {
+      "activity_id": "W0.B1.node",
+      "type": "node",
+      "trial_format": "same_different",
+      "prompt": "Are these the same?",
+      "target_pool": [
+        "pair_mm",
+        "pair_ms",
+        "pair_tt",
+        "pair_ta"
+      ],
+      "distractor_pool": [],
+      "trials_per_activity": 6,
+      "choices_count": 2
+    },
+    {
+      "activity_id": "W0.B1.boss",
+      "type": "boss",
+      "trial_format": "same_different",
+      "prompt": "Boss: Are these the same?",
+      "target_pool": [
+        "pair_mm",
+        "pair_ms",
+        "pair_tt",
+        "pair_ta"
+      ],
+      "distractor_pool": [],
+      "trials_per_activity": 8,
+      "choices_count": 2
+    },
+    {
+      "activity_id": "W0.B2.node",
+      "type": "node",
+      "trial_format": "sort_vowel_consonant",
+      "prompt": "Sort the letter.",
+      "target_pool": [
+        "grapheme_m",
+        "grapheme_s",
+        "grapheme_t",
+        "grapheme_a",
+        "grapheme_i",
+        "grapheme_o"
+      ],
+      "distractor_pool": [],
+      "trials_per_activity": 6,
+      "choices_count": 2
+    },
+    {
+      "activity_id": "W0.B2.boss",
+      "type": "boss",
+      "trial_format": "sort_vowel_consonant",
+      "prompt": "Boss: Sort the letter.",
+      "target_pool": [
+        "grapheme_m",
+        "grapheme_s",
+        "grapheme_t",
+        "grapheme_a",
+        "grapheme_i",
+        "grapheme_o"
+      ],
+      "distractor_pool": [],
+      "trials_per_activity": 8,
+      "choices_count": 2
+    },
+    {
+      "activity_id": "W1.CF0.node",
+      "type": "node",
+      "trial_format": "match_this_choose_from_these",
+      "prompt": "Tap the matching letter.",
+      "target_pool": [
+        "grapheme_b",
+        "grapheme_d",
+        "grapheme_p",
+        "grapheme_q",
+        "grapheme_m",
+        "grapheme_n"
+      ],
+      "distractor_pool": [
+        "grapheme_b",
+        "grapheme_d",
+        "grapheme_p",
+        "grapheme_q",
+        "grapheme_m",
+        "grapheme_n"
+      ],
+      "trials_per_activity": 8,
+      "choices_count": 4,
+      "skill_tag": "confusables_letters"
+    },
+    {
+      "activity_id": "W1.CF0.boss",
+      "type": "boss",
+      "trial_format": "match_this_choose_from_these",
+      "prompt": "Boss: Match this letter.",
+      "target_pool": [
+        "grapheme_b",
+        "grapheme_d",
+        "grapheme_p",
+        "grapheme_q",
+        "grapheme_m",
+        "grapheme_n"
+      ],
+      "distractor_pool": [
+        "grapheme_b",
+        "grapheme_d",
+        "grapheme_p",
+        "grapheme_q",
+        "grapheme_m",
+        "grapheme_n"
+      ],
+      "trials_per_activity": 12,
+      "choices_count": 4,
+      "skill_tag": "confusables_letters",
+      "mastery": {
+        "window_trials": 12,
+        "min_accuracy": 0.8,
+        "max_avg_hint_step": 2
+      },
+      "remediation_map": {
+        "confusable_bd": "W1.CF.bd.remed",
+        "confusable_pq": "W1.CF.pq.remed",
+        "confusable_mn": "W1.CF.mn.remed"
+      }
+    },
+    {
+      "activity_id": "W1.CF.bd.remed",
+      "type": "node",
+      "trial_format": "match_this_choose_from_these",
+      "prompt": "Practice: b vs d",
+      "target_pool": [
+        "grapheme_b",
+        "grapheme_d"
+      ],
+      "distractor_pool": [
+        "grapheme_b",
+        "grapheme_d"
+      ],
+      "trials_per_activity": 10,
+      "choices_count": 2,
+      "skill_tag": "confusable_bd"
+    },
+    {
+      "activity_id": "W1.CF.pq.remed",
+      "type": "node",
+      "trial_format": "match_this_choose_from_these",
+      "prompt": "Practice: p vs q",
+      "target_pool": [
+        "grapheme_p",
+        "grapheme_q"
+      ],
+      "distractor_pool": [
+        "grapheme_p",
+        "grapheme_q"
+      ],
+      "trials_per_activity": 10,
+      "choices_count": 2,
+      "skill_tag": "confusable_pq"
+    },
+    {
+      "activity_id": "W1.CF.mn.remed",
+      "type": "node",
+      "trial_format": "match_this_choose_from_these",
+      "prompt": "Practice: m vs n",
+      "target_pool": [
+        "grapheme_m",
+        "grapheme_n"
+      ],
+      "distractor_pool": [
+        "grapheme_m",
+        "grapheme_n"
+      ],
+      "trials_per_activity": 10,
+      "choices_count": 2,
+      "skill_tag": "confusable_mn"
+    }
+  ]
+}
